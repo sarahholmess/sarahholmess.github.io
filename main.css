@@ -13,28 +13,31 @@
 /* this is for phones */
 @media (max-width: 750px) {
     .container {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        margin: 20px;
+        /* how do i change margin color???? */
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-template-rows: auto auto;
+        grid-template-columns: 325px auto;
+        grid-template-rows: 250px auto;
         grid-template-areas:
-        "p a"
-        "p a"
-        "i i"
-        "i i";
+        "p p"
+        "p p"
+        "a a"
+        "a a";
         height: 100%;
         background-color: lightblue;
         color: grey;
         grid-gap: 10px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-template-rows: repeat(1fr);
     }
 }
 
 .about {
     grid-area: a;
+    margin: 10px;
 }
 
 .picture {
     grid-area: p;
+    margin: 10px;
 }
