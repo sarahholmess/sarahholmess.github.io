@@ -1,43 +1,58 @@
 .container {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0px;
     height: 100%;
-    background-color: pink;
-    color: grey;
+    color: rgb(46, 46, 46);
     grid-gap: 10px;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-    /* grid-template-rows: repeat(1fr); */
-    grid-template-columns: minmax(100px, 2fr) 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "i a"
+    "i a"
+    "p p"
+    "p p";
 }
 
 /* this is for phones */
 @media (max-width: 750px) {
     .container {
         font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
         font-weight: 300;
-        margin: 20px;
+        margin: 0px;
         /* how do i change margin color???? */
         display: grid;
-        grid-template-columns: 325px auto;
-        grid-template-rows: 250px auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
+        "i a"
+        "i a"
         "p p"
-        "p p"
-        "a a"
-        "a a";
+        "p p";
         height: 100%;
-        background-color: lightblue;
-        color: grey;
+        color: rgb(46, 46, 46);
         grid-gap: 10px;
     }
 }
 
-.about {
+#about {
+    background-color: rgba(80, 154, 204, 0.7);
     grid-area: a;
-    margin: 10px;
+    margin: 0px;
 }
 
-.picture {
+.image {
+    justify-items: center;
+    align-content: center;
+    background-color: blue;
+    grid-area: i;
+    margin: 0px;
+}
+
+.pointer {
+    background-color: pink;
     grid-area: p;
-    margin: 10px;
 }
