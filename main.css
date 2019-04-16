@@ -1,28 +1,24 @@
-.container {
-    /* background-color: pink; */
-    background: url(background.svg) cover;
+body {
+    background: url(background.svg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.container {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    font-weight: 300;
-    /* padding: 20px;
-    padding-left: 40px;
-    padding-right: 40px; */
+    font-weight: 500;
     height: 100%;
     color: rgb(46, 46, 46);
-    /* grid-gap: 10px; */
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
     "i a"
-    "i a"
     "p p"
-    "p p";
-    /* how do i make responsive margins */
+    "o o";
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -32,21 +28,18 @@
     .container {
         font-family: 'Montserrat', sans-serif;
         font-size: 15px;
-        font-weight: 300;
-        margin: 0px;
-        /* how do i change margin color???? */
+        font-weight: 500;
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
         "i a"
         "p p"
-        "p p"
-        "p p";
+        "o o";
         height: 100%;
         color: rgb(46, 46, 46);
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 12%;
+        padding-right: 12%;
     }
 }
 
@@ -54,7 +47,7 @@
     background-color: rgba(80, 154, 204, 0.7);
     grid-area: a;
     /* padding will just move text while margin will move the whole elemnt */
-    padding: 20px;
+    padding: 10px;
 }
 
 .image {
@@ -64,7 +57,7 @@
 }
 img {
     width: 100%;
-    padding: 0px;
+    padding-top: 22px;
     margin: 0 auto;
 }
 
@@ -72,4 +65,10 @@ img {
     padding: 10px;
     background-color: rgba(80, 154, 204, 0.7);
     grid-area: p;
+}
+
+.other {
+    padding: 10px;
+    background-color: rgba(80, 154, 204, 0.7);
+    grid-area: o;
 }
