@@ -1,0 +1,81 @@
+@keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.1) rotate(30deg);
+      transform: scale(0.1) rotate(30deg);
+      -webkit-transform-origin: center bottom;
+      transform-origin: center bottom;
+    }
+  
+    50% {
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+    }
+  
+    70% {
+      -webkit-transform: rotate(3deg);
+      transform: rotate(3deg);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+}
+  
+  .jackInTheBox {
+    -webkit-animation-name: jackInTheBox;
+    animation-name: jackInTheBox;
+}
+
+body {
+    background: url(background.svg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 100%;
+    color: rgb(46, 46, 46);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+
+#about {
+    background-color: rgba(80, 154, 204, 0.8);
+    grid-area: a;
+    /* padding will just move text while margin will move the whole elemnt */
+    padding: 10px;
+}
+
+.image {
+    background-color: rgba(80, 154, 204, 0.8);
+    grid-area: i;
+    padding: 10px;
+}
+img {
+    width: 100%;
+    padding-top: 22px;
+    margin: 0 auto;
+}
+
+.pointer {
+  
+  padding: 10px;
+  background-color: rgba(80, 154, 204, 0.8);
+  grid-area: p;
+  row-gap: 10px;
+}
+
+.other {
+    padding: 10px;
+    background-color: rgba(80, 154, 204, 0.8);
+    grid-area: o;
+}
