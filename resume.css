@@ -1,0 +1,83 @@
+/* font-family: 'Raleway', sans-serif; */
+
+body {
+    background-color: pink;
+}
+
+h1{
+    font-size:1.2em;
+}
+h2 {
+    margin-bottom: 35px;
+}
+
+.container {
+    color: rgb(97, 97, 97);
+    height: 100%;
+    margin-left: 20px;
+    /* activates css grid functionality */
+    display: grid;
+    column-gap: 30px;
+    /* builds a 12 column */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10% 10% auto auto auto;
+    grid-template-areas:
+    "h h h h h h"
+    "p p p p p p"
+    "e e e x x x"
+    "e e e x x x"
+    "s s s x x x";
+}
+
+@media (max-width: 650px) {
+     .container {
+       
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "h"
+        "p"
+        "e"
+        "x"
+        "s";
+    }
+}
+
+.header {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    grid-area: h;
+}
+
+.bigger {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.personal {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    grid-area: p;
+}
+
+.education {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    grid-area: e;
+}
+
+.experience {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    grid-area: x;
+}
+
+.skills {
+    font-family: 'Raleway', sans-serif;
+    grid-area: s;
+}

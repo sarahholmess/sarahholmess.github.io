@@ -1,32 +1,35 @@
-@keyframes jackInTheBox {
-    from {
-      opacity: 0;
-      -webkit-transform: scale(0.1) rotate(30deg);
-      transform: scale(0.1) rotate(30deg);
-      -webkit-transform-origin: center bottom;
-      transform-origin: center bottom;
-    }
-  
-    50% {
-      -webkit-transform: rotate(-10deg);
-      transform: rotate(-10deg);
-    }
-  
-    70% {
-      -webkit-transform: rotate(3deg);
-      transform: rotate(3deg);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
-  
-  .jackInTheBox {
-    -webkit-animation-name: jackInTheBox;
-    animation-name: jackInTheBox;
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 body {
@@ -37,46 +40,35 @@ body {
     background-size: cover;
 }
 
-.container {
+.containerPointer {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-rows: repeat(5, 500px);
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 500;
-    height: 100%;
     color: rgb(46, 46, 46);
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
 }
 
-
-#about {
-    background-color: rgba(80, 154, 204, 0.8);
-    grid-area: a;
-    /* padding will just move text while margin will move the whole elemnt */
-    padding: 10px;
-}
-
-.image {
-    background-color: rgba(80, 154, 204, 0.8);
-    grid-area: i;
-    padding: 10px;
-}
-img {
-    width: 100%;
-    padding-top: 22px;
-    margin: 0 auto;
+img{
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;  
+  width: 500px;
 }
 
 .pointer {
-  
+  grid-gap: 10px;
   padding: 10px;
+  margin: 0 auto;
   background-color: rgba(80, 154, 204, 0.8);
-  grid-area: p;
-  row-gap: 10px;
-}
-
-.other {
-    padding: 10px;
-    background-color: rgba(80, 154, 204, 0.8);
-    grid-area: o;
-    row-gap: 10px;
 }

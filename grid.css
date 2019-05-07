@@ -5,6 +5,9 @@ body {
     -o-background-size: repeat;
     background-size: repeat;
 }
+h2{
+  display:inline;
+}
 
 .container {
     font-family: 'Montserrat', sans-serif;
@@ -21,38 +24,33 @@ body {
     "o o";
     padding-left: 15%;
     padding-right: 15%;
-    margin: 10px;
-}
-
-/* this should make all the links normal I suppose */
-a:link {
-  color:  rgb(46, 46, 46);;
-  text-decoration: none;
-}
-
-a:visited {
-  color:  rgb(46, 46, 46);;
-  text-decoration: none;
-}
-
-h1:hover {
-  text-decoration: underline;
 }
 
 /* this is for phones */
 @media (max-width: 750px) {
     .container {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
         display: grid;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: auto auto auto;
-        margin: 10px
+        grid-template-areas:
+        "i a"
+        "p p"
+        "o o";
+        height: 100%;
+        color: rgb(46, 46, 46);
+        padding-left: 12%;
+        padding-right: 12%;
     }
 }
 
-.about {
+#about {
     background-color: rgba(80, 154, 204, 0.8);
     grid-area: a;
-    
+    /* padding will just move text while margin will move the whole elemnt */
+    padding: 10px;
 }
 
 .image {
@@ -60,10 +58,9 @@ h1:hover {
     grid-area: i;
     padding: 10px;
 }
-
 img {
     width: 100%;
-    padding: 0px;
+    padding-top: 22px;
     margin: 0 auto;
 }
 
